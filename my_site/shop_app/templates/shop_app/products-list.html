@@ -1,0 +1,74 @@
+{% extends 'shop_app/base.html' %}
+{% load i18n %}
+
+{% block title %}
+  {% translate 'Products list' %}
+{% endblock %}
+
+{% block body %}
+  <h1>{% translate 'Products' %}</h1>
+  {% if products %}
+    <div>
+      {% blocktrans count products_count=products|length %}There is only one product.{% plural %}There are {{ products_count }} products.{% endblocktrans %}
+    </div>
+    <div>
+      <table class="price-list">
+        <thead>
+          <tr>
+            <th>№</th>
+            <th>
+              {% translate 'Name' context 'product name' %}
+            </th>
+            <th>
+              {% translate 'Price' %}
+            </th>
+            <th>
+              {% translate 'Discount' %}
+            </th>
+            <th>
+              {% translate 'Image' %}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for product in products %}
+            <tr>
+              <td>{{ forloop.counter }}</td>
+              <td>
+                <a class="link-shop-app" href="{% url 'shop_app:product_details' pk=product.pk %}">{{ product.name }}</a>
+              </td>
+              <td>{{ product.price }}</td>
+              <td>
+                {% translate 'no discount' as no_discount %}
+                {% firstof product.discount no_discount %}
+              </td>
+              <td>
+                {% if product.preview %}
+                  <img class="img-preview" src="{{ product.preview.url }}" alt="{{ product.preview.name }}" />
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% if perms.shop_app.add_product %}
+      <br />
+      <nav>
+        <a class="link-shop-app" href="{% url 'shop_app:product_create' %}">{% translate 'Create a new product' %}</a>
+      </nav>
+    {% endif %}
+    <br />
+  {% else %}
+    {% if perms.shop_app.add_product %}
+      {% url 'shop_app:product_create' as create_product_url %}
+      {% blocktrans %}<h3>No products yet</h3>
+      <br />
+      <nav>
+        <a class="link-shop-app" href="{{ create_product_url }}">Create a new one</a>
+      </nav>
+      {% endblocktrans %}
+    {% endif %}
+    <br />
+  {% endif %}
+{% endblock %}

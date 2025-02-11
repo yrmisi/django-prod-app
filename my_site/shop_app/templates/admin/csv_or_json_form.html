@@ -1,0 +1,18 @@
+{% extends 'admin/base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <div>
+    <form action="." method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div class="submit-row">
+        {% trans 'Upload' as upload %}
+        {# prettier-ignore #}
+        <input type="submit"
+          value="{{ upload }} {% if file_csv %}CSV{% elif file_json %}JSON{% endif %}" />
+        {# prettier-ignore-end #}
+      </div>
+    </form>
+  </div>
+{% endblock %}

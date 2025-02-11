@@ -1,0 +1,56 @@
+{% extends 'shop_app/base.html' %}
+{% load i18n %}
+{% block title %}
+  {% translate 'Product' %}&nbsp;#{{ product.pk }}
+{% endblock %}
+{% block body %}
+  <h1>{% translate 'Product' %} <strong>{{ product.name }}</strong></h1>
+
+  <div>
+    {% blocktrans with description=product.description price=product.price discount=product.discount archived=product.archived %}
+    <div>
+      Description: <em>{{ description }}</em>
+    </div>
+    <div>Price: {{ price }}$</div>
+    <div>Discount: {{ discount }}%</div>
+    <div>Archived: {{ archived }}</div>
+    {% endblocktrans %}
+    <div>
+      {% if product.preview %}
+        <img src="{{ product.preview.url }}" alt="{{ product.preview.name }}" />
+      {% endif %}
+      <br />
+      <h3>{% translate 'Images:' %}</h3>
+      <div>
+        {% blocktrans count images_count=product.images.all|length %}There is only one image.{% plural %}There are {{ images_count }} images.{% endblocktrans %}
+      </div>
+      <div>
+        {% for img in product.images.all %}
+          <img class="img-details" src="{{ img.image.url }}" alt="{{ img.image.name }}" />
+          <div>{{ img.description }}</div>
+        {% empty %}
+          <p>
+            {% translate 'No images available.' %}
+          </p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <br />
+  <nav>
+    <ul>
+      {% if user.is_superuser or user == product.created_by and perms.shop_app.change_product %}
+        <li>
+          <a class="link-shop-app" href="{% url 'shop_app:product_update' pk=product.pk %}">{% translate 'Update product' %}</a>
+        </li>
+        <li>
+          <a class="link-shop-app" href="{% url 'shop_app:product_archived' pk=product.pk %}">{% translate 'Archived product' %}</a>
+        </li>
+      {% endif %}
+      <li>
+        <a class="link-shop-app" href="{% url 'shop_app:product_list' %}">{% translate 'Back to products list' %}</a>
+      </li>
+    </ul>
+  </nav>
+  <br />
+{% endblock %}

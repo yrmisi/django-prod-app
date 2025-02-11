@@ -1,0 +1,50 @@
+{% extends 'shop_app/base.html' %}
+{% load i18n %}
+
+{% block title %}
+  {% trans 'Orders list' %}
+{% endblock %}
+
+{% block body %}
+  <h1>{% trans 'Orders' %}:</h1>
+
+  {% if object_list %}
+    <div>
+      {% for order in object_list %}
+        <div>
+          <p>
+            <a class="link-shop-app" href="{% url 'shop_app:order_details' pk=order.pk %}">{% trans 'Details' %}&nbsp;#{{ order.pk }}</a>
+          </p>
+          <p>
+            {% trans 'Order by' %} {% firstof order.user.first_name order.user.username %}
+            <a class="link-shop-app" href="{% url 'shop_app:user_orders_list' user_id=order.user.pk %}">{% trans ' - view all orders of the user' %}</a>
+          </p>
+          <p>
+            {% trans 'Promocode' %}: <code>{{ order.promocode }}</code>
+          </p>
+          <p>
+            {% trans 'Delivery address' %}: {{ order.delivery_address }}
+          </p>
+          <div>
+            {% trans 'Products in orders' %}:<ol>
+              {% for product in order.products.all %}
+                <li>
+                  {{ product.name }} {% trans 'for' %}&nbsp;${{ product.price }}
+                </li>
+              {% endfor %}
+            </ol>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <h3>{% trans 'No orders yet' %}</h3>
+  {% endif %}
+
+  <nav>
+    <li>
+      <a class="link-shop-app" href="{% url 'shop_app:order_create' %}">{% trans 'Create a new order' %}</a>
+    </li>
+  </nav>
+  <br />
+{% endblock %}

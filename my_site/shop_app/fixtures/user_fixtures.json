@@ -1,0 +1,87 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$S3FkNjlaN3E5VlVlaFNtdnFmZ2NaUg$MtrxYyxjmkCGhO/18t5tgblwyBnoPxhye/HkMzCEZRE",
+      "last_login": "2024-12-13T22:22:54.455Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "admin",
+      "last_name": "admin",
+      "email": "example@mail.ru",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-10-05T18:56:48Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$dUQ1bjZldFl4TXBROGlvaDlGNmFzcA$j5llZ+YgdUn59pVnQ8G4oicOD3rystZe1HjxUQTdY+8",
+      "last_login": "2024-12-16T21:55:23.796Z",
+      "is_superuser": false,
+      "username": "jonh",
+      "first_name": "",
+      "last_name": "Jonson",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-12-10T16:00:55Z",
+      "groups": [],
+      "user_permissions": [
+        32,
+        25,
+        26
+      ]
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$dGpLWGZGSjhmNDB1dGVXc2xucDhoTw$63VwGUiEbB/wbPYAEAhzC1mwUT3tdrtfS0o/1YtcVcY",
+      "last_login": "2024-12-13T13:55:38.230Z",
+      "is_superuser": false,
+      "username": "sam",
+      "first_name": "",
+      "last_name": "Samsonov",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-12-10T16:02:12Z",
+      "groups": [
+        4,
+        5
+      ],
+      "user_permissions": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$and6ZGZBdUZ5Vzk0RmtTNFZUM254VA$J/+JHUZm53RAlY7f+Um/B2J5F7RirRAynJLpd4bGXkE",
+      "last_login": "2024-12-11T19:00:42.360Z",
+      "is_superuser": false,
+      "username": "Uirii",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-12-10T16:13:26.859Z",
+      "groups": [
+        4
+      ],
+      "user_permissions": [
+        4
+      ]
+    }
+  }
+]

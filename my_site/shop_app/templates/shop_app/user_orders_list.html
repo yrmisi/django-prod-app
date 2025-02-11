@@ -1,0 +1,62 @@
+{% extends 'shop_app/base.html' %}
+{% load i18n %}
+{% load cache %}
+
+{% block title %}
+  {% trans 'User order list' %}
+{% endblock %}
+
+{% block body %}
+  <h1>
+    {% blocktrans with user_name=owner.username %}List of orders of user {{ user_name }}
+    {% endblocktrans %}
+  </h1>
+
+  {% if user_order_list %}
+    {% cache 300 user_orders owner.pk %}
+    {% for order in user_order_list %}
+      <div>
+        <p>
+          <!-- prettier-ignore -->
+          <a class="link-shop-app" href="{% url 'shop_app:order_details' pk=order.pk %}"
+          >{% trans 'Order' %}&nbsp;№{{ forloop.counter }}</a>
+        </p>
+        <p>
+          {% trans 'Created' %} {{ order.created_at }}
+        </p>
+        <p>
+          {% trans 'Promocode' %}: <code>{{ order.promocode }}</code>
+        </p>
+        <p>
+          {% trans 'Delivery address' %}: {{ order.delivery_address }}
+        </p>
+        <div>
+          {% trans 'Products in orders' %}:<ol>
+            {% for product in order.products.all %}
+              <li>
+                {{ product.name }} {% trans 'for' %}&nbsp;${{ product.price }}
+              </li>
+            {% endfor %}
+          </ol>
+        </div>
+        <p>
+          {% if order.receipt %}
+            <a class="link-shop-app" href="{{ order.receipt.url }}">{% trans 'Receipt' %}</a>
+          {% endif %}
+        </p>
+      </div>
+      <br />
+    {% endfor %}
+    {% endcache %}
+    <nav>
+      <ul>
+        <li>
+          <a class="link-shop-app" href="{% url 'shop_app:order_list' %}">{% trans 'Back to orders' %}</a>
+        </li>
+      </ul>
+    </nav>
+    <br />
+  {% else %}
+    <h3>{% trans 'There are no orders yet' %}</h3>
+  {% endif %}
+{% endblock %}

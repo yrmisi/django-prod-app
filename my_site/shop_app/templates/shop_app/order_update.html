@@ -1,0 +1,22 @@
+{% extends 'shop_app/base.html' %}
+{% load i18n %}
+
+{% block title %}
+  {% trans 'Update order' %}
+{% endblock %}
+
+{% block body %}
+  <h1>{% trans 'Update order' %}</h1>
+  <div>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">{% trans 'Update' %}</button>
+    </form>
+  </div>
+  <br />
+  <nav>
+    <a class="link-shop-app" href="{% url 'shop_app:order_details' pk=object.pk %}">{% trans 'Back to order' %}&nbsp;#{{ object.pk }}</a>
+  </nav>
+  <br />
+{% endblock %}

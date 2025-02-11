@@ -1,0 +1,101 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    /* подключаем шрифт Roboto с сервиса Google Fonts */
+}
+
+html,
+body {
+    margin: 5px;
+    /* удаляем внешний отступ */
+    padding: 5px;
+    /* удаляем внутренний отступ */
+    background-color: #f6f7f9;
+    /* установим цвет фона */
+}
+
+.link-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.link-shop-app {
+    color: rgb(167, 14, 167);
+    text-decoration: none;
+    /* убрать подчеркивание текста ссылки*/
+    margin-right: 20px;
+}
+
+.link-shop-app:hover {
+    color: rgb(63 42 255);
+    text-decoration: underline;
+    /* текст ссылки при наведении мыши будет подчеркнут */
+}
+
+.user-auth span {
+    margin: 20px;
+}
+
+button,
+.button-register {
+    padding: 10px 30px;
+    /* внутренний отступ расположения текста */
+    cursor: pointer;
+    /* при наведении мышка становиться лапкой */
+    border-radius: 5px;
+    /* граница с искруглением */
+    background-color: rgb(63 42 255);
+    /* цвет фона прозрачный*/
+    border: 1px solid rgb(63 42 255);
+    /* параметры границы толщина, тип (сплошной) и цвет */
+    color: white;
+    /* цвет шрифта текста */
+    font-size: 15px;
+}
+
+button:hover,
+.button-register:hover {
+    text-decoration: underline;
+    background-color: rgb(17, 190, 17);
+}
+
+.button-profile-update-back {
+    margin-right: 20px;
+}
+
+.form-user-profile {
+    display: flex; /* Используем flexbox для вертикального расположения */
+    flex-direction: column; /* Устанавливаем направление по вертикали */
+    gap: 10px; /* Промежуток между полями */
+}
+
+.img-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Делаем изображение круглым */
+    object-fit: cover; /* Обеспечиваем, чтобы изображение заполнило круг */
+}
+
+.container-form-avatar {
+    font-size: 10px;
+    /* display: flex;
+    flex-direction: row; */
+}
+
+.button-update-avatar {
+    background: none; /* убирает фон кнопки */
+    border: none; /* убирает рамку кнопки */
+    color: blue; /* задает цвет текста, как у ссылки */
+    text-decoration: underline; /* добавляет подчеркивание, как у ссылки */
+    cursor: pointer; /* меняет курсор на указатель при наведении */
+    padding: 0; /* убирает отступы, чтобы кнопка выглядела как текст */
+}
+
+.button-update-avatar:hover {
+    background: none; /* убирает фон кнопки */
+    border: none; /* убирает рамку кнопки */
+    color: rgb(17, 190, 17); /* задает цвет текста, как у ссылки */
+    text-decoration: underline; /* добавляет подчеркивание, как у ссылки */
+    cursor: pointer; /* меняет курсор на указатель при наведении */
+    padding: 0; /* убирает отступы, чтобы кнопка выглядела как текст */
+}

@@ -1,0 +1,49 @@
+[tool.flake8]
+# Flake8 settings (pip install Flake8-pyproject)
+count = true
+exclude = [".venv", ".git", "__pycache__", "build", "dist", "tests", "migrations", "*/tests.py"]
+extend-ignore = ["E203", "W503", "F401", "D104"]
+include = ["my_site/*.py"]
+max-line-length = 120
+per-file-ignores = ["__init__.py:F401,F403"]
+python-version = "3.12"
+# plugins = ["flake8-django"]
+
+[tool.flake8.plugins]
+django = "flake8_django:DjangoStyleChecker"
+
+[tool.flake8-docstrings]
+convention = "google" # or "numpy" or "pep257"
+
+[tool.black]
+# Black settings
+exclude = ".venv"
+include = "my_site/*.py"
+line-length = 120
+skip-string-normalization = true
+
+[tool.isort]
+# isort settings
+combine_as_imports = true
+default_section = "THIRDPARTY"
+include_trailing_comma = true
+known_first_party = ["my_site", "my_site.my_site", "my_site.myauth", "my_site.shop_app", "my_site.config"]
+known_third_party = ["django", "sqlalchemy", "pydantic"]
+line_length = 120
+profile = "black"
+skip = [".venv", ".git", "__pycache__"]
+
+[tool.mypy]
+exclude = ["tests", "__pycache__"]
+files = ["my_site"]
+ignore_missing_imports = true
+python_version = "3.12"
+strict = true
+# либо установить pip install 'django-stubs[compatible-mypy]' для типов заглушек
+mypy_path = "./my_site"
+plugins = ["mypy_django_plugin.main"]
+
+[tool.django-stubs]
+django_settings_module = "my_site.settings"
+ignore_missing_model_attributes = true
+strict_settings = true

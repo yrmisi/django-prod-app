@@ -1,0 +1,29 @@
+{% extends 'myauth/base.html' %}
+{% load i18n %}
+
+{% block nav_links %}
+  {% comment %}Здесь ничего не выводим для переопределения блока из base.html{% endcomment %}
+{% endblock %}
+
+{% block title %}
+  {% trans 'Login' %}
+{% endblock %}
+
+{% block body %}
+  <form action="{% url 'myauth:login' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% comment %} {% if error %}
+      <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <p>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required />
+    </p>
+    <p>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+    </p> {% endcomment %}
+    <button type="submit">{% trans "Login" %}</button>
+  </form>
+{% endblock %}

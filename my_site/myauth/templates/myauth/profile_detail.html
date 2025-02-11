@@ -1,0 +1,82 @@
+{% extends 'myauth/base.html' %}
+{% load i18n %}
+
+{% block title %}
+  {% trans 'Profile' %}
+{% endblock %}
+
+{% block body %}
+  <h1>{% trans 'Profile detail' %}</h1>
+
+  {% if user.is_authenticated %}
+    {% if profile.avatar %}
+      <p>
+        <img class="img-avatar" src="{{ profile.avatar.url }}" alt="{{ profile.avatar.name }}" />
+      </p>
+    {% else %}
+      <p>
+        {% trans 'Avatar' %}:&nbsp;{% trans 'no image' %}
+      </p>
+    {% endif %}
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="container-form-avatar">
+        <p>
+          <input type="hidden" name="user_id" value="{{ profile.user.pk }}" />
+          {{ form.as_p }}
+          <button class="button-update-avatar" type="submit">{% trans 'Update avatar' %}</button>
+        </p>
+      </div>
+    </form>
+    <h2>{% trans 'User' %}: {{ profile.user.username }}</h2>
+    <p>
+      {% trans 'First name' %}:&nbsp;{% if profile.user.first_name %}
+        {{ profile.user.first_name }}
+      {% else %}
+        {% trans 'no first name' %}
+      {% endif %}
+    </p>
+    <p>
+      {% trans 'Last name' %}:&nbsp;{% if profile.user.last_name %}
+        {{ profile.user.last_name }}
+      {% else %}
+        {% trans 'no last name' %}
+      {% endif %}
+    </p>
+    <p>
+      {% trans 'E-mail' %}:&nbsp;{% if profile.user.email %}
+        {{ profile.user.email }}
+      {% else %}
+        {% trans 'no e-mail' %}
+      {% endif %}
+    </p>
+
+    {% if profile.bio %}
+      <p>
+        {% trans 'Biography' %}: {{ profile.bio }}
+      </p>
+    {% endif %}
+
+    {% if profile.agreement_accepted %}
+      <p>
+        {% trans 'Agreement' %}:&nbsp;{% trans 'I agree' %}
+      </p>
+    {% else %}
+      <p>
+        {% trans 'Agreement' %}:&nbsp;{% trans "I don't agree" %}
+      </p>
+    {% endif %}
+    <br />
+
+    <nav>
+      <ul>
+        <li>
+          <a class="link-shop-app" href="{% url 'myauth:profiles_list' %}">{% trans 'Back to profiles' %}</a>
+        </li>
+      </ul>
+    </nav>
+    <br />
+  {% else %}
+    <h2>{% trans 'User anonymous' %}</h2>
+  {% endif %}
+{% endblock %}

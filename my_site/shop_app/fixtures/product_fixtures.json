@@ -1,0 +1,366 @@
+[
+  {
+    "model": "shop_app.product",
+    "pk": 4,
+    "fields": {
+      "name": "Laptop",
+      "description": "MacBock Pro 16 Core 10",
+      "price": "1999.00",
+      "discount": 5,
+      "created_at": "2024-10-07T21:37:16.444Z",
+      "archived": false,
+      "created_by": null,
+      "preview": "products/product_4/preview/Laptop1.jpeg"
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 5,
+    "fields": {
+      "name": "Desktop (new)",
+      "description": "MSI ПК MSI MAG Infinite S3 13TC-853XRU",
+      "price": "999.00",
+      "discount": 5,
+      "created_at": "2024-10-07T21:37:16.465Z",
+      "archived": false,
+      "created_by": null,
+      "preview": "products/product_5/preview/Desktop1.jpeg"
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 6,
+    "fields": {
+      "name": "Smartphone",
+      "description": "Samsung Exynos 1480, 4x 2.75 GHz ARM Cortex-A78, ARM Cortex-A55",
+      "price": "499.00",
+      "discount": 10,
+      "created_at": "2024-10-07T21:37:16.481Z",
+      "archived": false,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 7,
+    "fields": {
+      "name": "Tablet",
+      "description": "super displey",
+      "price": "3990.00",
+      "discount": 0,
+      "created_at": "2024-11-06T22:46:34.841Z",
+      "archived": false,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 8,
+    "fields": {
+      "name": "Phone 2",
+      "description": "New phone 2",
+      "price": "1590.00",
+      "discount": 10,
+      "created_at": "2024-11-07T18:44:44.781Z",
+      "archived": false,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 9,
+    "fields": {
+      "name": "Phone 3",
+      "description": "New phone 3",
+      "price": "1690.00",
+      "discount": 15,
+      "created_at": "2024-11-07T18:45:51.104Z",
+      "archived": true,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 10,
+    "fields": {
+      "name": "Tablet 2",
+      "description": "New tablet 2",
+      "price": "1450.00",
+      "discount": 5,
+      "created_at": "2024-11-07T18:47:14.798Z",
+      "archived": true,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 12,
+    "fields": {
+      "name": "Headphones",
+      "description": "create new headphones",
+      "price": "299.00",
+      "discount": 10,
+      "created_at": "2024-12-01T14:46:50.376Z",
+      "archived": false,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 13,
+    "fields": {
+      "name": "Headphones 2",
+      "description": "create new headphones",
+      "price": "199.00",
+      "discount": 5,
+      "created_at": "2024-12-01T14:48:20.864Z",
+      "archived": false,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 14,
+    "fields": {
+      "name": "Desktop 4",
+      "description": "The new product desktop",
+      "price": "1290.00",
+      "discount": 5,
+      "created_at": "2024-12-11T17:26:01.391Z",
+      "archived": false,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 15,
+    "fields": {
+      "name": "Phone 5",
+      "description": "New phone display",
+      "price": "1190.00",
+      "discount": 5,
+      "created_at": "2024-12-11T17:30:28.504Z",
+      "archived": false,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 16,
+    "fields": {
+      "name": "Phone 6",
+      "description": "New smartphone",
+      "price": "1450.00",
+      "discount": 4,
+      "created_at": "2024-12-11T17:59:01.018Z",
+      "archived": false,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 17,
+    "fields": {
+      "name": "Laptop 2",
+      "description": "New laptop",
+      "price": "990.00",
+      "discount": 0,
+      "created_at": "2024-12-11T18:02:59.112Z",
+      "archived": false,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 18,
+    "fields": {
+      "name": "Laptop 4",
+      "description": "New 4",
+      "price": "1459.00",
+      "discount": 4,
+      "created_at": "2024-12-11T18:05:37.677Z",
+      "archived": false,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 19,
+    "fields": {
+      "name": "Desktop 5.1",
+      "description": "New model",
+      "price": "1290.00",
+      "discount": 5,
+      "created_at": "2024-12-11T18:08:16.081Z",
+      "archived": false,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 20,
+    "fields": {
+      "name": "Laptop 4.5",
+      "description": "New display",
+      "price": "980.00",
+      "discount": 0,
+      "created_at": "2024-12-11T18:11:35.559Z",
+      "archived": false,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 21,
+    "fields": {
+      "name": "Phone 5.1",
+      "description": "New model 5.1",
+      "price": "945.00",
+      "discount": 5,
+      "created_at": "2024-12-11T18:15:06.073Z",
+      "archived": true,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 22,
+    "fields": {
+      "name": "Phone 3.2",
+      "description": "New display",
+      "price": "450.00",
+      "discount": 0,
+      "created_at": "2024-12-11T18:19:49.429Z",
+      "archived": false,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 23,
+    "fields": {
+      "name": "Tablet 3",
+      "description": "New table",
+      "price": "1190.00",
+      "discount": 0,
+      "created_at": "2024-12-11T18:22:42.732Z",
+      "archived": false,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 24,
+    "fields": {
+      "name": "Desktop 6.2",
+      "description": "New product",
+      "price": "2345.00",
+      "discount": 0,
+      "created_at": "2024-12-11T18:38:27.188Z",
+      "archived": false,
+      "created_by": 2,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 25,
+    "fields": {
+      "name": "Desktop 6.3 5",
+      "description": "Display 5\"",
+      "price": "2359.00",
+      "discount": 10,
+      "created_at": "2024-12-11T18:39:36.689Z",
+      "archived": false,
+      "created_by": 2,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 26,
+    "fields": {
+      "name": "Smart speaker",
+      "description": "Smart speaker Alisa",
+      "price": "199.00",
+      "discount": 5,
+      "created_at": "2025-01-08T20:04:40.671Z",
+      "archived": false,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 27,
+    "fields": {
+      "name": "Desktop",
+      "description": "MSI ПК MSI MAG Infinite S3 13TC-853XRU",
+      "price": "999.00",
+      "discount": 10,
+      "created_at": "2025-01-14T07:34:09.321Z",
+      "archived": false,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 28,
+    "fields": {
+      "name": "Smartphone 8",
+      "description": "",
+      "price": "299.00",
+      "discount": 10,
+      "created_at": "2025-01-18T13:04:10.100Z",
+      "archived": false,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 29,
+    "fields": {
+      "name": "Smartphone 9",
+      "description": "",
+      "price": "399.00",
+      "discount": 10,
+      "created_at": "2025-01-18T13:04:10.100Z",
+      "archived": false,
+      "created_by": null,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shop_app.product",
+    "pk": 30,
+    "fields": {
+      "name": "Smartphone 10",
+      "description": "",
+      "price": "499.00",
+      "discount": 10,
+      "created_at": "2025-01-18T13:04:10.101Z",
+      "archived": false,
+      "created_by": null,
+      "preview": ""
+    }
+  }
+]

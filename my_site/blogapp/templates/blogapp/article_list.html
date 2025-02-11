@@ -1,0 +1,45 @@
+{% extends 'shop_app/base.html' %}
+{% load i18n %}
+
+{% block title %}
+  {% trans 'List of articles' %}
+{% endblock %}
+
+{% block body %}
+  <h1>{% trans 'Articles' %}</h1>
+
+  {% if articles %}
+    <div>
+      {% blocktrans count articles_count=articles|length %}One article has been uploaded to this section.{% plural %}{{ articles_count }} articles have been uploaded to this section.{% endblocktrans %}
+    </div>
+    <br />
+    <div>
+      {% for article in articles %}
+        <p>
+          <a class="link-shop-app" href="{% url 'blogapp:article_details' pk=article.pk %}">{% trans 'Article' %}&nbsp;№{{ forloop.counter }}</a>
+        </p>
+        <p>
+          {% trans 'Title' %}: {{ article.title }}
+        </p>
+        <p>
+          {% trans 'Date of publication' %}: {{ article.pub_date }}
+        </p>
+        <p>
+          {% trans 'Author' %}: {{ article.author.name }}
+        </p>
+        <p>
+          {% trans 'Category' %}: {{ article.category.name }}
+        </p>
+        <p>
+          {% trans 'Tags' %}:{% for tag in article.tags.all %}
+            <b>{{ tag.name }}{% if not forloop.last %}, {% endif %}</b>
+          {% endfor %}
+        </p>
+        <br />
+      {% endfor %}
+      <br />
+    </div>
+  {% else %}
+    <h3>{% trans 'No published articles yet' %}</h3>
+  {% endif %}
+{% endblock %}

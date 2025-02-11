@@ -1,0 +1,45 @@
+{% extends 'shop_app/base.html' %}
+{% load i18n %}
+{% load cache %}
+
+{% block title %}
+  {% translate 'Shop index' %}
+{% endblock %}
+
+{% block body %}
+  <h1>{% translate 'Hello shop index' %}</h1>
+  <div>
+    <ul>
+      {% for name, price in products.items %}
+        <li>
+          {{ name|capfirst }} {% translate 'for' %}&nbsp;${{ price|floatformat|add:'.99' }}
+        </li>
+        {% comment %} <span>{{ name|length_is:'2' }}</span> {% endcomment %}
+      {% empty %}
+        <li>
+          {% translate 'No products' %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div>
+    {% comment %} <strong>You have {{ items }} item{{ items|pluralize }}</strong> {% endcomment %}
+    {% comment %} <strong>You have {{ items }} class{{ items|pluralize:'es' }}</strong> {% endcomment %}
+    <strong>You have {{ items }} cherr{{ items|pluralize:'y,ies' }}</strong>
+  </div>
+  <div>
+    {% blocktrans with time_running=time_running|floatformat:2 %}Time running: {{ time_running }} milliseconds{% endblocktrans %}
+  </div>
+  <br />
+  {% cache 100 lorem %}
+  <div>
+    {% if language_code == 'en' %}
+      {% lorem 3 p random %}
+    {% elif language_code == 'ru' %}
+      {% for line in text_rus %}
+        <p>{{ line }}</p>
+      {% endfor %}
+    {% endif %}
+  </div>
+  {% endcache %}
+{% endblock %}

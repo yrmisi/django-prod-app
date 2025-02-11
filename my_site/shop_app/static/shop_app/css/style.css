@@ -1,0 +1,87 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    /* подключаем шрифт Roboto с сервиса Google Fonts */
+}
+
+html,
+body {
+    margin: 5px;
+    /* удаляем внешний отступ */
+    padding: 5px;
+    /* удаляем внутренний отступ */
+    background-color: #f6f7f9;
+    /* установим цвет фона */
+}
+
+.link-shop-app {
+    color: rgb(167, 14, 167);
+    text-decoration: none;
+    /* убрать подчеркивание текста ссылки*/
+    margin-right: 20px;
+}
+
+.link-shop-app:hover {
+    color: rgb(63 42 255);
+    text-decoration: underline;
+    /* текст ссылки при наведении мыши будет подчеркнут */
+}
+
+button {
+    padding: 10px 30px;
+    /* внутренний отступ расположения текста */
+    cursor: pointer;
+    /* при наведении мышка становиться лапкой */
+    border-radius: 5px;
+    /* граница с искруглением */
+    background-color: rgb(63 42 255);
+    /* цвет фона прозрачный*/
+    border: 1px solid rgb(63 42 255);
+    /* параметры границы толщина, тип (сплошной) и цвет */
+    color: white;
+    /* цвет шрифта текста */
+    font-size: 15px;
+}
+
+button:hover {
+    text-decoration: underline;
+    background-color: rgb(17, 190, 17);
+}
+
+.button-delete:hover {
+    font-size: 20px;
+    text-decoration: line-through;
+    background-color: red;
+}
+
+.link-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.user-auth span {
+    margin: 20px;
+}
+
+.price-list {
+    border: 1px solid gray;  /* создаем границу таблицы */
+    border-collapse: collapse;  /* объединяем все соседние границы */
+}
+
+.price-list td, .price-list th {
+    border: 1px solid gray;
+    padding: 5px;  /* между границей таблицы и текстом было расстояние */
+}
+
+.price-list thead > tr {
+    background-color: lightgreen;  /* установим цвет фоном */
+    font-weight: bold; /* выделим шрифт жирным */
+}
+
+.img-preview {
+    width: 100px;
+}
+
+.img-details{
+    width: 150px;
+}

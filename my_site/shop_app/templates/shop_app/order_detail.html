@@ -1,0 +1,44 @@
+{% extends 'shop_app/base.html' %}
+{% load i18n %}
+
+{% block title %}
+  {% blocktrans with pk=object.pk %}Order #{{ pk }} details{% endblocktrans %}
+{% endblock %}
+
+{% block body %}
+  <h1>{% blocktrans with pk=object.pk %}Order #{{ pk }}{% endblocktrans %}</h1>
+  <div>
+    <p>
+      {% trans 'Order by' %} {% firstof object.user.first_name object.user.username %}
+    </p>
+    <p>
+      {% trans 'Promocode' %}: <code>{{ object.promocode }}</code>
+    </p>
+    <p>
+      {% trans 'Delivery address' %}: {{ object.delivery_address }}
+    </p>
+    <div>
+      {% trans 'Products in orders' %}:<ol>
+        {% for product in object.products.all %}
+          <li>
+            {{ product.name }} {% trans 'for' %}&nbsp;${{ product.price }}
+          </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li>
+        <a class="link-shop-app" href="{% url 'shop_app:order_update' pk=object.pk %}">{% trans 'Update order' %}</a>
+      </li>
+      <li>
+        <a class="link-shop-app" href="{% url 'shop_app:order_delete' pk=object.pk %}">{% trans 'Delete order' %}</a>
+      </li>
+      <li>
+        <a class="link-shop-app" href="{% url 'shop_app:order_list' %}">{% trans 'Back to orders' %}</a>
+      </li>
+    </ul>
+  </nav>
+  <br />
+{% endblock %}

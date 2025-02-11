@@ -1,0 +1,19 @@
+{% extends 'admin/change_list.html' %}
+{% load i18n %}
+
+{% comment %}disable formatting{% endcomment %}
+{# prettier-ignore #}
+{% block object-tools-items %}
+{# prettier-ignore-end #}
+{% load admin_urls %}
+<li>
+  <a href="{% url url_import_csv %}" class="addlink">{% trans 'Import CSV' %}</a>
+</li>
+{% url url_import_json as url_json %}
+{% if url_json %}
+  <li>
+    <a href="{{ url_json }}" class="addlink">{% trans 'Import JSON' %}</a>
+  </li>
+{% endif %}
+{{ block.super }}
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'shop_app/base.html' %}
+{% load i18n %}
+
+{% block title %}
+  {% trans 'Article' %}
+{% endblock %}
+
+{% block body %}
+  <h1>{% trans 'Article details' %}</h1>
+  <div>
+    <p>
+      {% trans 'Title' %}: {{ article.title }}
+    </p>
+    <p>
+      {% trans 'Date of publication' %}: {{ article.pub_date }}
+    </p>
+    <p>
+      {% trans 'Author' %}: {{ article.author.name }}
+    </p>
+    <p>
+      {% trans 'Content' %}: {{ article.content }}
+    </p>
+    <br />
+  </div>
+  <nav>
+    <ul>
+      <li>
+        <a class="link-shop-app" href="{% url 'blogapp:article_list' %}">{% trans 'Back to articles' %}</a>
+      </li>
+    </ul>
+  </nav>
+  <br />
+{% endblock %}

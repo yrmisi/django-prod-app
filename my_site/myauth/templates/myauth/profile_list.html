@@ -1,0 +1,52 @@
+{% extends 'myauth/base.html' %}
+{% load i18n %}
+
+{% block title %}
+  {% trans 'Profiles list' %}
+{% endblock %}
+
+{% block body %}
+  <h1>{% trans 'List of users' %}</h1>
+  <br />
+
+  {% for profile in profiles %}
+    <ul>
+      <li>
+        {% if profile.avatar %}
+          <p>
+            <img class="img-avatar" src="{{ profile.avatar.url }}" alt="{{ profile.avatar.name }}" />
+          </p>
+        {% else %}
+          <p>
+            {% trans 'Avatar' %}:&nbsp;{% trans 'no image' %}
+          </p>
+        {% endif %}
+
+        <h2>{% trans 'User' %}: {{ profile.user }}</h2>
+
+        {% if profile.bio %}
+          <p>
+            {% trans 'Biography' %}: {{ profile.bio }}
+          </p>
+        {% endif %}
+
+        {% if profile.agreement_accepted %}
+          <p>
+            {% trans 'Agreement' %}:&nbsp;{% trans 'I agree' %}
+          </p>
+        {% else %}
+          <p>
+            {% trans 'Agreement' %}:&nbsp;{% trans "I don't agree" %}
+          </p>
+        {% endif %}
+
+        <nav>
+          {% if user.is_staff or user == profile.user %}
+            <a class="link-shop-app" href="{% url 'myauth:profiles_detail' pk=profile.pk %}">{% trans 'Update profile' %}</a>
+          {% endif %}
+        </nav>
+      </li>
+    </ul>
+    <br />
+  {% endfor %}
+{% endblock %}

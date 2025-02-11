@@ -1,0 +1,19 @@
+{% extends 'myauth/base.html' %}
+{% load i18n %}
+
+{% block title %}
+  {% trans 'Profile update' %}
+{% endblock %}
+
+{% block body %}
+  <h1>{% trans 'Update user profile' %} {{ user.username }}</h1>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-user-profile">{{ form.as_p }}
+      {{ profile_form.as_p }}</div>
+    <div>
+      <button class="button-profile-update-back" id="aboutMeButton" data-pk="{{ user.pk }}">{% trans 'Go back' %}</button>
+      <button type="submit">{% trans 'Update' %}</button>
+    </div>
+  </form>
+{% endblock %}

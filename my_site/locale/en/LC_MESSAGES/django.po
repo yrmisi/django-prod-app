@@ -1,0 +1,902 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-09 01:01+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: blogapp/admin.py:20 blogapp/models.py:83
+msgid "content"
+msgstr "content"
+
+#: blogapp/apps.py:8
+msgid "blog"
+msgstr "blog"
+
+#: blogapp/context_processors.py:9 myauth/context_processors.py:9
+#: shop_app/context_processors.py:9
+msgid "Home page"
+msgstr "Home page"
+
+#: blogapp/context_processors.py:10
+#: blogapp/templates/blogapp/article_list.html:9
+#: myauth/context_processors.py:11 shop_app/context_processors.py:14
+msgid "Articles"
+msgstr "Articles"
+
+#: blogapp/models.py:16
+msgctxt "author name"
+msgid "name"
+msgstr "name"
+
+#: blogapp/models.py:18 myauth/models.py:13
+msgid "biography"
+msgstr "biography"
+
+#: blogapp/models.py:25
+msgid "author"
+msgstr "author"
+
+#: blogapp/models.py:26
+msgid "authors"
+msgstr "authors"
+
+#: blogapp/models.py:30
+#, python-format
+msgid "Author %(name)s by id %(pk)d"
+msgstr "Author %(name)s by id %(pk)d"
+
+#: blogapp/models.py:39
+msgctxt "category name"
+msgid "name"
+msgstr "name"
+
+#: blogapp/models.py:47
+msgid "category"
+msgstr "category"
+
+#: blogapp/models.py:48
+msgid "categories"
+msgstr "categories"
+
+#: blogapp/models.py:52
+#, python-format
+msgid "Category %(name)s by id %(pk)d"
+msgstr "Category %(name)s by id %(pk)d"
+
+#: blogapp/models.py:61
+msgctxt "tag name"
+msgid "name"
+msgstr "name"
+
+#: blogapp/models.py:69
+msgid "tag"
+msgstr "tag"
+
+#: blogapp/models.py:70 blogapp/models.py:99
+msgid "tags"
+msgstr "tags"
+
+#: blogapp/models.py:74
+#, python-format
+msgid "Tag with id-%(pk)d by %(name)s"
+msgstr "Tag with id-%(pk)d by %(name)s"
+
+#: blogapp/models.py:82
+msgid "title"
+msgstr "title"
+
+#: blogapp/models.py:84
+msgid "date of publication"
+msgstr "date of publication"
+
+#: blogapp/models.py:89
+msgid "authors id"
+msgstr "authors id"
+
+#: blogapp/models.py:96
+msgid "category id"
+msgstr "category id"
+
+#: blogapp/models.py:106
+msgid "article"
+msgstr "article"
+
+#: blogapp/models.py:107
+msgid "articles"
+msgstr "articles"
+
+#: blogapp/models.py:113
+#, python-format
+msgid ""
+"Article with id-%(pk)d title %(title)s from the author by id %(author_id)s"
+msgstr ""
+"Article with id-%(pk)d title %(title)s from the author by id %(author_id)s"
+
+#: blogapp/templates/blogapp/article_detail.html:5
+#: blogapp/templates/blogapp/article_list.html:19
+msgid "Article"
+msgstr "Article"
+
+#: blogapp/templates/blogapp/article_detail.html:9
+msgid "Article details"
+msgstr "Article details"
+
+#: blogapp/templates/blogapp/article_detail.html:12
+#: blogapp/templates/blogapp/article_list.html:22
+msgid "Title"
+msgstr "Title"
+
+#: blogapp/templates/blogapp/article_detail.html:15
+#: blogapp/templates/blogapp/article_list.html:25
+msgid "Date of publication"
+msgstr "Date of publication"
+
+#: blogapp/templates/blogapp/article_detail.html:18
+#: blogapp/templates/blogapp/article_list.html:28
+msgid "Author"
+msgstr "Author"
+
+#: blogapp/templates/blogapp/article_detail.html:21
+msgid "Content"
+msgstr "Content"
+
+#: blogapp/templates/blogapp/article_detail.html:28
+msgid "Back to articles"
+msgstr "Back to articles"
+
+#: blogapp/templates/blogapp/article_list.html:5
+msgid "List of articles"
+msgstr "List of articles"
+
+#: blogapp/templates/blogapp/article_list.html:13
+#, python-format
+msgid "One article has been uploaded to this section."
+msgid_plural "%(articles_count)s articles have been uploaded to this section."
+msgstr[0] "One article has been uploaded to this section."
+msgstr[1] "%(articles_count)s articles have been uploaded to this section."
+
+#: blogapp/templates/blogapp/article_list.html:31
+msgid "Category"
+msgstr "Category"
+
+#: blogapp/templates/blogapp/article_list.html:34
+msgid "Tags"
+msgstr "Tags"
+
+#: blogapp/templates/blogapp/article_list.html:43
+msgid "No published articles yet"
+msgstr "No published articles yet"
+
+#: blogapp/views.py:51
+msgid "Blog articles (latest)"
+msgstr "Blog articles (latest)"
+
+#: blogapp/views.py:52
+msgid "Updates on changes and addition blog articles"
+msgstr "Updates on changes and addition blog articles"
+
+#: my_site/settings.py:184
+msgid "English"
+msgstr "English"
+
+#: my_site/settings.py:184
+msgid "Russian"
+msgstr "Russian"
+
+#: myauth/context_processors.py:10 shop_app/context_processors.py:13
+msgid "Profiles"
+msgstr "Profiles"
+
+#: myauth/forms.py:12 myauth/templates/myauth/profile_detail.html:33
+#: myauth/views.py:80
+msgid "First name"
+msgstr "First name"
+
+#: myauth/forms.py:12 myauth/templates/myauth/profile_detail.html:40
+#: myauth/views.py:81
+msgid "Last name"
+msgstr "Last name"
+
+#: myauth/forms.py:12 myauth/templates/myauth/profile_detail.html:47
+#: myauth/views.py:82
+msgid "E-mail"
+msgstr "E-mail"
+
+#: myauth/forms.py:20 myauth/templates/myauth/profile_detail.html:56
+#: myauth/templates/myauth/profile_list.html:29 myauth/views.py:83
+msgid "Biography"
+msgstr "Biography"
+
+#: myauth/forms.py:21 myauth/templates/myauth/profile_detail.html:62
+#: myauth/templates/myauth/profile_detail.html:66
+#: myauth/templates/myauth/profile_list.html:35
+#: myauth/templates/myauth/profile_list.html:39 myauth/views.py:84
+msgid "Agreement"
+msgstr "Agreement"
+
+#: myauth/forms.py:22
+msgid "Add avatar"
+msgstr "Add avatar"
+
+#: myauth/forms.py:30
+msgid "Change avatar"
+msgstr "Change avatar"
+
+#: myauth/models.py:12
+msgid "user"
+msgstr "user"
+
+#: myauth/models.py:14
+msgid "agreement accepted"
+msgstr "agreement accepted"
+
+#: myauth/models.py:16
+msgid "avatar"
+msgstr "avatar"
+
+#: myauth/models.py:20
+msgid "profile"
+msgstr "profile"
+
+#: myauth/models.py:21
+msgid "profiles"
+msgstr "profiles"
+
+#: myauth/models.py:24
+#, python-format
+msgid "User profile id %d"
+msgstr "User profile id %d"
+
+#: myauth/templates/myauth/about_me.html:6
+msgid "About me"
+msgstr "About me"
+
+#: myauth/templates/myauth/about_me.html:10
+msgid "User info"
+msgstr "User info"
+
+#: myauth/templates/myauth/about_me.html:13
+msgid "Detail"
+msgstr "Detail"
+
+#: myauth/templates/myauth/about_me.html:23
+#: myauth/templates/myauth/profile_detail.html:27
+msgid "Update avatar"
+msgstr "Update avatar"
+
+#: myauth/templates/myauth/about_me.html:33
+#: myauth/templates/myauth/profile_list.html:45
+msgid "Update profile"
+msgstr "Update profile"
+
+#: myauth/templates/myauth/about_me.html:36
+#: myauth/templates/myauth/profile_detail.html:80
+msgid "User anonymous"
+msgstr "User anonymous"
+
+#: myauth/templates/myauth/about_me_update.html:5
+msgid "Profile update"
+msgstr "Profile update"
+
+#: myauth/templates/myauth/about_me_update.html:9
+msgid "Update user profile"
+msgstr "Update user profile"
+
+#: myauth/templates/myauth/about_me_update.html:15
+msgid "Go back"
+msgstr "Go back"
+
+#: myauth/templates/myauth/about_me_update.html:16
+#: shop_app/templates/shop_app/order_update.html:14
+#: shop_app/templates/shop_app/product_update_form.html:12
+msgid "Update"
+msgstr "Update"
+
+#: myauth/templates/myauth/base.html:10 shop_app/templates/shop_app/base.html:8
+msgid "Base title"
+msgstr "Base title"
+
+#: myauth/templates/myauth/base.html:42
+#: shop_app/templates/shop_app/base.html:37
+msgid "User:"
+msgstr "User:"
+
+#: myauth/templates/myauth/base.html:46
+#: shop_app/templates/shop_app/base.html:41
+msgid "Email:"
+msgstr "Email:"
+
+#: myauth/templates/myauth/base.html:48
+#: shop_app/templates/shop_app/base.html:43
+msgid "Logout"
+msgstr "Logout"
+
+#: myauth/templates/myauth/base.html:50 myauth/templates/myauth/login.html:10
+#: myauth/templates/myauth/login.html:29
+#: shop_app/templates/shop_app/base.html:45
+msgid "Login"
+msgstr "Login"
+
+#: myauth/templates/myauth/profile_detail.html:5
+msgid "Profile"
+msgstr "Profile"
+
+#: myauth/templates/myauth/profile_detail.html:9
+msgid "Profile detail"
+msgstr "Profile detail"
+
+#: myauth/templates/myauth/profile_detail.html:18
+#: myauth/templates/myauth/profile_list.html:21 myauth/views.py:78
+msgid "Avatar"
+msgstr "Avatar"
+
+#: myauth/templates/myauth/profile_detail.html:18
+#: myauth/templates/myauth/profile_list.html:21 myauth/views.py:92
+msgid "no image"
+msgstr "no image"
+
+#: myauth/templates/myauth/profile_detail.html:31
+#: myauth/templates/myauth/profile_list.html:25 myauth/views.py:79
+#: shop_app/admin.py:162
+msgid "User"
+msgstr "User"
+
+#: myauth/templates/myauth/profile_detail.html:36
+msgid "no first name"
+msgstr "no first name"
+
+#: myauth/templates/myauth/profile_detail.html:43
+msgid "no last name"
+msgstr "no last name"
+
+#: myauth/templates/myauth/profile_detail.html:50
+msgid "no e-mail"
+msgstr "no e-mail"
+
+#: myauth/templates/myauth/profile_detail.html:62
+#: myauth/templates/myauth/profile_list.html:35 myauth/views.py:103
+msgid "I agree"
+msgstr "I agree"
+
+#: myauth/templates/myauth/profile_detail.html:66
+#: myauth/templates/myauth/profile_list.html:39 myauth/views.py:104
+msgid "I don't agree"
+msgstr "I don't agree"
+
+#: myauth/templates/myauth/profile_detail.html:74
+msgid "Back to profiles"
+msgstr "Back to profiles"
+
+#: myauth/templates/myauth/profile_list.html:5
+msgid "Profiles list"
+msgstr "Profiles list"
+
+#: myauth/templates/myauth/profile_list.html:9
+msgid "List of users"
+msgstr "List of users"
+
+#: myauth/templates/myauth/register.html:10
+#: myauth/templates/myauth/register.html:14
+#: myauth/templates/myauth/register.html:18
+msgid "Register"
+msgstr "Register"
+
+#: myauth/views.py:34
+msgid "welcome hello word"
+msgstr "Hello world!"
+
+#: myauth/views.py:39
+#, python-brace-format
+msgid "one product"
+msgid_plural "{count} products"
+msgstr[0] "One product."
+msgstr[1] "{count} products."
+
+#: shop_app/admin.py:19 shop_app/models.py:191
+msgid "order"
+msgstr "order"
+
+#: shop_app/admin.py:20 shop_app/models.py:192
+msgid "orders"
+msgstr "orders"
+
+#: shop_app/admin.py:59
+msgid "Price options"
+msgstr "Price options"
+
+#: shop_app/admin.py:60 shop_app/forms.py:59
+msgid "Images"
+msgstr "Images"
+
+#: shop_app/admin.py:62
+msgid "Extra options"
+msgstr "Extra options"
+
+#: shop_app/admin.py:66
+msgid "Extra options. Field 'archived' is for soft delete"
+msgstr "Extra options. Field 'archived' is for soft delete"
+
+#: shop_app/admin.py:84
+msgid "Product characteristics"
+msgstr "Product characteristics"
+
+#: shop_app/admin.py:105 shop_app/admin.py:193
+#, python-format
+msgid "Data from %s was imported"
+msgstr "Data from %s was imported"
+
+#: shop_app/admin.py:114 shop_app/admin.py:214
+#, python-format
+msgid "The file must have the %s extension"
+msgstr "The file must have the %s extension"
+
+#: shop_app/admin.py:139 shop_app/models.py:69
+msgid "product"
+msgstr "product"
+
+#: shop_app/admin.py:140 shop_app/models.py:70 shop_app/models.py:171
+msgid "products"
+msgstr "products"
+
+#: shop_app/admin.py:152
+msgid "Shipping information"
+msgstr "Shipping information"
+
+#: shop_app/apps.py:8
+msgid "shop"
+msgstr "shop"
+
+#: shop_app/context_processors.py:10
+#: shop_app/templates/shop_app/groups-list.html:9
+msgid "Groups"
+msgstr "Groups"
+
+#: shop_app/context_processors.py:11
+#: shop_app/templates/shop_app/products-list.html:9
+msgid "Products"
+msgstr "Products"
+
+#: shop_app/context_processors.py:12
+#: shop_app/templates/shop_app/order_list.html:9
+msgid "Orders"
+msgstr "Orders"
+
+#: shop_app/forms.py:50 shop_app/templates/shop_app/products-list.html:20
+msgctxt "product name"
+msgid "Name"
+msgstr "Name"
+
+#: shop_app/forms.py:51 shop_app/templates/shop_app/products-list.html:23
+msgid "Price"
+msgstr "Price"
+
+#: shop_app/forms.py:52
+msgid "Product description"
+msgstr "Product description"
+
+#: shop_app/forms.py:53 shop_app/templates/shop_app/products-list.html:26
+msgid "Discount"
+msgstr "Discount"
+
+#: shop_app/forms.py:54
+msgid "Preview"
+msgstr "Preview"
+
+#: shop_app/forms.py:76
+msgid "Customer"
+msgstr "Customer"
+
+#: shop_app/forms.py:77
+msgid "List of products"
+msgstr "List of products"
+
+#: shop_app/forms.py:78 shop_app/templates/shop_app/order_detail.html:15
+#: shop_app/templates/shop_app/order_list.html:23
+#: shop_app/templates/shop_app/user_orders_list.html:28
+msgid "Promocode"
+msgstr "Promocode"
+
+#: shop_app/forms.py:79 shop_app/templates/shop_app/order_detail.html:18
+#: shop_app/templates/shop_app/order_list.html:26
+#: shop_app/templates/shop_app/user_orders_list.html:31
+msgid "Delivery address"
+msgstr "Delivery address"
+
+#: shop_app/forms.py:93
+msgctxt "group name"
+msgid "Name"
+msgstr "Name"
+
+#: shop_app/forms.py:97
+msgid "file"
+msgstr "file"
+
+#: shop_app/models.py:38
+msgctxt "product name"
+msgid "name"
+msgstr "name"
+
+#: shop_app/models.py:41 shop_app/models.py:124
+msgid "description"
+msgstr "description"
+
+#: shop_app/models.py:43
+msgid "price"
+msgstr "price"
+
+#: shop_app/models.py:44
+msgid "discount"
+msgstr "discount"
+
+#: shop_app/models.py:45 shop_app/models.py:174
+msgid "created at"
+msgstr "create at"
+
+#: shop_app/models.py:46
+msgid "archived"
+msgstr "archived"
+
+#: shop_app/models.py:52
+msgid "created by"
+msgstr "create by"
+
+#: shop_app/models.py:55
+msgid "preview"
+msgstr "preview"
+
+#: shop_app/models.py:80
+#, python-format
+msgid "Product '%(name)s', price %(price)d у.е."
+msgstr "Product '%(name)s', price %(price)d у.е."
+
+#: shop_app/models.py:120
+msgctxt "product id"
+msgid "product"
+msgstr "product"
+
+#: shop_app/models.py:122
+msgid "image"
+msgstr "image"
+
+#: shop_app/models.py:136
+msgid "product image"
+msgstr "product image"
+
+#: shop_app/models.py:137
+msgid "product images"
+msgstr "product images"
+
+#: shop_app/models.py:147
+#, python-format
+msgid "Product image %s"
+msgstr "Product image %s"
+
+#: shop_app/models.py:169
+msgctxt "user id"
+msgid "user"
+msgstr "user"
+
+#: shop_app/models.py:172
+msgid "promocode"
+msgstr "promocode"
+
+#: shop_app/models.py:173
+msgid "delivery address"
+msgstr "delivery address"
+
+#: shop_app/models.py:176 shop_app/templates/shop_app/user_orders_list.html:44
+msgid "Receipt"
+msgstr "Receipt"
+
+#: shop_app/models.py:201
+#, python-format
+msgid "Order № %s"
+msgstr "Order № %s"
+
+#: shop_app/templates/admin/csv_or_json_form.html:10
+msgid "Upload"
+msgstr "Upload"
+
+#: shop_app/templates/shop_app/base.html:57
+msgid "Today is"
+msgstr "Today is"
+
+#: shop_app/templates/shop_app/groups-list.html:5
+msgid "Groups list"
+msgstr "Groups list"
+
+#: shop_app/templates/shop_app/groups-list.html:14
+#: shop_app/templates/shop_app/order_create.html:15
+#: shop_app/templates/shop_app/product_create_form.html:12
+msgid "Create"
+msgstr "Create"
+
+#: shop_app/templates/shop_app/groups-list.html:20
+msgid "No groups yet"
+msgstr "No groups yet"
+
+#: shop_app/templates/shop_app/order_create.html:5
+msgid "Create order"
+msgstr "Create order"
+
+#: shop_app/templates/shop_app/order_create.html:9
+#: shop_app/templates/shop_app/order_list.html:46
+msgid "Create a new order"
+msgstr "Create a new order"
+
+#: shop_app/templates/shop_app/order_create.html:22
+msgid "Back to order list"
+msgstr "Back to order list"
+
+#: shop_app/templates/shop_app/order_delete.html:5
+#: shop_app/templates/shop_app/product_archived.html:4
+msgid "Confirm archived"
+msgstr "Confirm archived"
+
+#: shop_app/templates/shop_app/order_delete.html:9
+msgid "Are you sure you want to delete order"
+msgstr "Are you sure you want to delete order"
+
+#: shop_app/templates/shop_app/order_delete.html:15
+msgid "Delete"
+msgstr "Delete"
+
+#: shop_app/templates/shop_app/order_delete.html:20
+#: shop_app/templates/shop_app/order_update.html:19
+msgid "Back to order"
+msgstr "Back to order"
+
+#: shop_app/templates/shop_app/order_detail.html:5
+#, python-format
+msgid "Order #%(pk)s details"
+msgstr "Order #%(pk)s details"
+
+#: shop_app/templates/shop_app/order_detail.html:9
+#, python-format
+msgid "Order #%(pk)s"
+msgstr "Order #%(pk)s"
+
+#: shop_app/templates/shop_app/order_detail.html:12
+#: shop_app/templates/shop_app/order_list.html:19
+msgid "Order by"
+msgstr "Order by"
+
+#: shop_app/templates/shop_app/order_detail.html:21
+#: shop_app/templates/shop_app/order_list.html:29
+#: shop_app/templates/shop_app/user_orders_list.html:34
+msgid "Products in orders"
+msgstr "Products in orders"
+
+#: shop_app/templates/shop_app/order_detail.html:24
+#: shop_app/templates/shop_app/order_list.html:32
+#: shop_app/templates/shop_app/shop-index.html:15
+#: shop_app/templates/shop_app/user_orders_list.html:37
+msgid "for"
+msgstr "for"
+
+#: shop_app/templates/shop_app/order_detail.html:33
+#: shop_app/templates/shop_app/order_update.html:5
+#: shop_app/templates/shop_app/order_update.html:9
+msgid "Update order"
+msgstr "Update order"
+
+#: shop_app/templates/shop_app/order_detail.html:36
+msgid "Delete order"
+msgstr "Delete order"
+
+#: shop_app/templates/shop_app/order_detail.html:39
+#: shop_app/templates/shop_app/user_orders_list.html:54
+msgid "Back to orders"
+msgstr "Back to orders"
+
+#: shop_app/templates/shop_app/order_list.html:5
+msgid "Orders list"
+msgstr "Orders list"
+
+#: shop_app/templates/shop_app/order_list.html:16
+msgid "Details"
+msgstr "Details"
+
+#: shop_app/templates/shop_app/order_list.html:20
+msgid " - view all orders of the user"
+msgstr " - view all orders of the user"
+
+#: shop_app/templates/shop_app/order_list.html:41
+msgid "No orders yet"
+msgstr "No orders yet"
+
+#: shop_app/templates/shop_app/product_archived.html:7
+msgid "Are you sure you want to archived"
+msgstr "Are you sure you want to archived"
+
+#: shop_app/templates/shop_app/product_archived.html:13
+msgid "Archived"
+msgstr "Archived"
+
+#: shop_app/templates/shop_app/product_archived.html:18
+#: shop_app/templates/shop_app/product_update_form.html:17
+msgid "Back to product"
+msgstr "Back to product"
+
+#: shop_app/templates/shop_app/product_create_form.html:4
+#: shop_app/templates/shop_app/product_create_form.html:7
+msgid "Create product"
+msgstr "Create product"
+
+#: shop_app/templates/shop_app/product_create_form.html:17
+#: shop_app/templates/shop_app/products-details.html:51
+msgid "Back to products list"
+msgstr "Back to products list"
+
+#: shop_app/templates/shop_app/product_update_form.html:4
+#: shop_app/templates/shop_app/product_update_form.html:7
+#: shop_app/templates/shop_app/products-details.html:44
+msgid "Update product"
+msgstr "Update product"
+
+#: shop_app/templates/shop_app/products-details.html:4
+#: shop_app/templates/shop_app/products-details.html:7
+msgid "Product"
+msgstr "Product"
+
+#: shop_app/templates/shop_app/products-details.html:10
+#, python-format
+msgid ""
+"\n"
+"    <div>\n"
+"      Description: <em>%(description)s</em>\n"
+"    </div>\n"
+"    <div>Price: %(price)s$</div>\n"
+"    <div>Discount: %(discount)s%%</div>\n"
+"    <div>Archived: %(archived)s</div>\n"
+"    "
+msgstr ""
+"\n"
+"    <div>\n"
+"      Description: <em>%(description)s</em>\n"
+"    </div>\n"
+"    <div>Price: %(price)s$</div>\n"
+"    <div>Discount: %(discount)s%%</div>\n"
+"    <div>Archived: %(archived)s</div>\n"
+"    "
+
+#: shop_app/templates/shop_app/products-details.html:23
+msgid "Images:"
+msgstr "Images:"
+
+#: shop_app/templates/shop_app/products-details.html:25
+#, python-format
+msgid "There is only one image."
+msgid_plural "There are %(images_count)s images."
+msgstr[0] "There is only one image."
+msgstr[1] "There are %(images_count)s images."
+
+#: shop_app/templates/shop_app/products-details.html:33
+msgid "No images available."
+msgstr "No images available."
+
+#: shop_app/templates/shop_app/products-details.html:47
+msgid "Archived product"
+msgstr "Archived product"
+
+#: shop_app/templates/shop_app/products-list.html:5
+msgid "Products list"
+msgstr "Products list"
+
+#: shop_app/templates/shop_app/products-list.html:12
+#, python-format
+msgid "There is only one product."
+msgid_plural "There are %(products_count)s products."
+msgstr[0] "There is only one product."
+msgstr[1] "There are %(products_count)s products."
+
+#: shop_app/templates/shop_app/products-list.html:29
+msgid "Image"
+msgstr "Image"
+
+#: shop_app/templates/shop_app/products-list.html:42
+msgid "no discount"
+msgstr "no discount"
+
+#: shop_app/templates/shop_app/products-list.html:58
+msgid "Create a new product"
+msgstr "Create a new product"
+
+#: shop_app/templates/shop_app/products-list.html:65
+#, python-format
+msgid ""
+"<h3>No products yet</h3>\n"
+"      <br />\n"
+"      <nav>\n"
+"        <a class=\"link-shop-app\" href=\"%(create_product_url)s\">Create a "
+"new one</a>\n"
+"      </nav>\n"
+"      "
+msgstr ""
+"<h3>No products yet</h3>\n"
+"      <br />\n"
+"      <nav>\n"
+"        <a class=\"link-shop-app\" href=\"%(create_product_url)s\">Create a "
+"new one</a>\n"
+"      </nav>\n"
+"      "
+
+#: shop_app/templates/shop_app/shop-index.html:6
+msgid "Shop index"
+msgstr "Shop index"
+
+#: shop_app/templates/shop_app/shop-index.html:10
+msgid "Hello shop index"
+msgstr "Hello shop index"
+
+#: shop_app/templates/shop_app/shop-index.html:21
+msgid "No products"
+msgstr "No products"
+
+#: shop_app/templates/shop_app/shop-index.html:34
+#, python-format
+msgid "Time running: %(time_running)s milliseconds"
+msgstr "Time running: %(time_running)s milliseconds"
+
+#: shop_app/templates/shop_app/shop_changelist.html:11
+msgid "Import CSV"
+msgstr "Import CSV"
+
+#: shop_app/templates/shop_app/shop_changelist.html:16
+msgid "Import JSON"
+msgstr "Import JSON"
+
+#: shop_app/templates/shop_app/user_orders_list.html:6
+msgid "User order list"
+msgstr "User order list"
+
+#: shop_app/templates/shop_app/user_orders_list.html:11
+#, python-format
+msgid ""
+"List of orders of user %(user_name)s\n"
+"    "
+msgstr ""
+"List of orders of user %(user_name)s\n"
+"    "
+
+#: shop_app/templates/shop_app/user_orders_list.html:22
+msgid "Order"
+msgstr "Order"
+
+#: shop_app/templates/shop_app/user_orders_list.html:25
+msgid "Created"
+msgstr "Created"
+
+#: shop_app/templates/shop_app/user_orders_list.html:60
+msgid "There are no orders yet"
+msgstr "There are no orders yet"
+
+#: shop_app/views.py:503
+msgid "Products in the store"
+msgstr "Products in the store"
+
+#: shop_app/views.py:505
+msgid "Current products sold in the store."
+msgstr "Current products sold in the store."
+
+#: shop_app/views.py:734 shop_app/views.py:767
+msgid "User ID is missing."
+msgstr "User ID is missing."
+
+#: shop_app/views.py:739
+msgid "User with the specified ID not found."
+msgstr "User with the specified ID not found."

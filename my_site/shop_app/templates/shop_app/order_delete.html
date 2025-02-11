@@ -1,0 +1,23 @@
+{% extends 'shop_app/base.html' %}
+{% load i18n %}
+
+{% block title %}
+  {% trans 'Confirm archived' %} {{ object.name }}
+{% endblock %}
+
+{% block body %}
+  <h1>{% trans 'Are you sure you want to delete order' %}&nbsp;#{{ object.pk }}?</h1>
+  <br />
+  <div>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button class="button-delete" type="submit">{% trans 'Delete' %}</button>
+    </form>
+  </div>
+  <br />
+  <nav>
+    <a class="link-shop-app" href="{% url 'shop_app:order_details' pk=object.pk %}">{% trans 'Back to order' %}&nbsp;#{{ object.pk }}</a>
+  </nav>
+  <br />
+{% endblock %}
