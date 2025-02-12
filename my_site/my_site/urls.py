@@ -15,14 +15,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from debug_toolbar.toolbar import debug_toolbar_urls
 from django.conf import settings
 from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.urls import include, path
-from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
+from drf_spectacular.views import (
+    SpectacularAPIView,
+    SpectacularRedocView,
+    SpectacularSwaggerView,
+)
 
 from .sitemaps import sitemaps
 
@@ -56,5 +59,5 @@ urlpatterns += i18n_patterns(
 if settings.DEBUG:
     urlpatterns.extend(static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT))
     urlpatterns.extend(static(settings.STATIC_URL, document_root=settings.STATIC_ROOT))
-    urlpatterns = [*urlpatterns] + debug_toolbar_urls()
+    # urlpatterns = [*urlpatterns] + debug_toolbar_urls()
     # urlpatterns.append(path("__debug__/", include("debug_toolbar.urls")))

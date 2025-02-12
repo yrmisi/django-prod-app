@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+import logging.config
 from pathlib import Path
 
 import sentry_sdk
@@ -43,9 +44,9 @@ DATABASE_DIR.mkdir(exist_ok=True)
 SECRET_KEY = settings.secret_key_project
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = settings.django_debug == "1"
 
-ALLOWED_HOSTS = ["0.0.0.0", "127.0.0.1"]
+ALLOWED_HOSTS = ["0.0.0.0", "127.0.0.1"] + settings.django_allowed_hosts.split(",")
 
 # Configure Internal IPs for django toolbar
 INTERNAL_IPS = ["127.0.0.1"]
@@ -71,7 +72,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "django_filters",
     'drf_spectacular',
-    "debug_toolbar",
+    # "debug_toolbar",
     # project apps
     "shop_app.apps.ShopAppConfig",
     "requestdataapp.apps.RequestdataappConfig",
@@ -92,7 +93,7 @@ MIDDLEWARE = [
     "django.middleware.locale.LocaleMiddleware",
     "django.contrib.admindocs.middleware.XViewMiddleware",
     # third party middleware
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    # "debug_toolbar.middleware.DebugToolbarMiddleware",
     # project middleware
     "requestdataapp.middlewares.set_useragent_on_request_middleware",
     "requestdataapp.middlewares.CountRequestsMiddleware",
@@ -190,6 +191,7 @@ LANGUAGES = [("en", _("English")), ("ru", _("Russian"))]
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "uploads"
@@ -289,36 +291,55 @@ SPECTACULAR_SETTINGS = {
 LOGFILE_NAME = BASE_DIR / "log.txt"
 LOGFILE_SIZE = 1 * 1024 * 1024
 LOGFILE_COUNT = 1
+DJANGO_LOGLEVEL = settings.loglevel
 
-LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": False,
-    "formatters": {
-        "verbose": {
-            "format": "%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s"
-        }
-    },
-    "handlers": {
-        "console": {
-            "class": "logging.StreamHandler",
-            "formatter": "verbose",
+logging.config.dictConfig(
+    {
+        "version": 1,
+        "disable_existing_loggers": False,
+        "formatters": {
+            "console": {
+                "format": "%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s"
+            }
         },
-        "logfile": {
-            # "class": "logging.handlers.RotatingFileHandler",
-            "class": "logging.handlers.TimedRotatingFileHandler",
-            "filename": LOGFILE_NAME,
-            "when": "midnight",
-            "interval": 1,
-            # "maxBytes": LOGFILE_SIZE,
-            "backupCount": LOGFILE_COUNT,
-            "formatter": "verbose",
+        "handlers": {
+            "console": {
+                "class": "logging.StreamHandler",
+                "formatter": "console",
+            },
         },
-    },
-    "root": {
-        "handlers": [
-            # "console",
-            "logfile",
-        ],
-        "level": "INFO",
-    },
-}
+        "loggers": {"": {"level": DJANGO_LOGLEVEL, "handlers": ["console"]}},
+    }
+)
+# LOGGING = {
+#     "version": 1,
+#     "disable_existing_loggers": False,
+#     "formatters": {
+#         "verbose": {
+#             "format": "%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s"
+#         }
+#     },
+#     "handlers": {
+#         "console": {
+#             "class": "logging.StreamHandler",
+#             "formatter": "verbose",
+#         },
+#         "logfile": {
+#             # "class": "logging.handlers.RotatingFileHandler",
+#             "class": "logging.handlers.TimedRotatingFileHandler",
+#             "filename": LOGFILE_NAME,
+#             "when": "midnight",
+#             "interval": 1,
+#             # "maxBytes": LOGFILE_SIZE,
+#             "backupCount": LOGFILE_COUNT,
+#             "formatter": "verbose",
+#         },
+#     },
+#     "root": {
+#         "handlers": [
+#             # "console",
+#             "logfile",
+#         ],
+#         "level": "INFO",
+#     },
+# }
