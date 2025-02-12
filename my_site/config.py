@@ -22,7 +22,8 @@ class Settings(BaseSettings):
     loglevel: str | None = None
     django_debug: str | None = None
     django_allowed_hosts: str | None = None
-    env_path: Path = Path(__file__).resolve().parent.joinpath(".env")
+    env_path: Path = Path(__file__).resolve().parent.parent.joinpath(".env")
+
     model_config: SettingsConfigDict = SettingsConfigDict(
         env_file=env_path, env_file_encoding='utf-8'
     )
