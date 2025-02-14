@@ -44,7 +44,7 @@ DATABASE_DIR.mkdir(exist_ok=True)
 SECRET_KEY = settings.secret_key_project
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = settings.django_debug == "1"
+DEBUG = settings.django_debug == True
 
 ALLOWED_HOSTS = ["0.0.0.0", "127.0.0.1"] + settings.django_allowed_hosts.split(",")
 
@@ -128,7 +128,6 @@ WSGI_APPLICATION = "my_site.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
@@ -150,7 +149,6 @@ CACHE_MIDDLEWARE_SECONDS = 200
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
@@ -169,7 +167,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
-
 LANGUAGE_CODE = "en-us"
 
 TIME_ZONE = "Europe/Moscow"
@@ -189,7 +186,6 @@ LANGUAGES = [("en", _("English")), ("ru", _("Russian"))]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
-
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / 'static'
 
@@ -291,7 +287,7 @@ SPECTACULAR_SETTINGS = {
 LOGFILE_NAME = BASE_DIR / "log.txt"
 LOGFILE_SIZE = 1 * 1024 * 1024
 LOGFILE_COUNT = 1
-DJANGO_LOGLEVEL = settings.loglevel
+DJANGO_LOGLEVEL = settings.loglevel.upper()
 
 logging.config.dictConfig(
     {

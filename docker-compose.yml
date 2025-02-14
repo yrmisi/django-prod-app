@@ -3,18 +3,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    # разделяем команды, чтоб не запускались одновременно
-    command: >
-      bash -c "
-        if [ ! -d "/app/static" ] || [ -z "$(ls -A /app/static)" ];
-        then python manage.py collectstatic --noinput;
-        fi && gunicorn my_site.wsgi:application --bind 0.0.0.0:8000 --reload
-      "
+    command: gunicorn my_site.wsgi:application --bind 0.0.0.0:8000 --reload
+    # разделяем команды, чтоб не запускались одновременно (если не указываем collectstatic в dockerfile)
     # command: >
     #   bash -c "
-    #     python manage.py collectstatic --noinput
-    #     &&
-    #     gunicorn my_site.wsgi:application --bind "0.0.0.0:8000" --reload
+    #     if [ ! -d "/app/static" ] || [ -z "$(ls -A /app/static)" ];
+    #     then python manage.py collectstatic --noinput;
+    #     fi && gunicorn my_site.wsgi:application --bind 0.0.0.0:8000 --reload
     #   "
     ports:
       - "8000:8000"
