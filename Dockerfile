@@ -4,11 +4,14 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-COPY requirements.txt /app/
+RUN pip install --upgrade pip "poetry==2.0.1"
+
+RUN poetry config virtualenvs.create false --local
+
+COPY poetry.lock pyproject.toml /app/
+
+RUN poetry install --only main --no-interaction --no-root
 
 COPY ./my_site /app/
 
-RUN pip install --upgrade pip --no-cache-dir \
-    && pip install --no-cache-dir -r requirements.txt
-
-CMD ["gunicorn", "my_site.wsgi:application", "--bind", "0.0.0.0:8000"]
+# CMD ["gunicorn", "my_site.wsgi:application", "--bind", "0.0.0.0:8000"]

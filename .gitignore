@@ -135,4 +135,6 @@ dmypy.json
 # Jetbrains Intellij IDEA
 .idea/
 
+# Project files
 /tasks
+/static_volume

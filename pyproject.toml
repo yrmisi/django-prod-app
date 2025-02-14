@@ -55,7 +55,7 @@ description = ""
 authors = [
     {name = "yrmisi",email = "yrmisi@mail.ru"}
 ]
-readme = "README.md"
+# readme = "README.md"
 requires-python = "3.13.2"
 dependencies = [
     "django-debug-toolbar (>=5.0.1,<6.0.0)",
