@@ -23,16 +23,16 @@ services:
         max-size: "200k"
     volumes:
       - ./my_site/:/app/  # чтоб обновлялся код вместе с бд
-      - ./static_volume/:/app/static/
+      - ./static/:/app/static/
   nginx:  # Nginx
     image: nginx:alpine
     ports:
       - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro  # Монтируем конфиг Nginx
-      - ./static_volume/:/app/static/
+      - ./static/:/app/static/
     depends_on:
       - app
 
 volumes:
-  static_volume:
+  static:
